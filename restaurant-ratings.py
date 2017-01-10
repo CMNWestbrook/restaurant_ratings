@@ -13,10 +13,15 @@ def print_ratings(file_name):
         restaurant, rating = line.rstrip().split(":")
         restaurant_ratings[restaurant] = rating
 
+    def get_restaurant_and_rating():
+        restaurant = raw_input("restaurant name: ")
+        rating = raw_input("rating: ")
+        restaurant_ratings[restaurant] = rating
+
+    get_restaurant_and_rating()
+
     for restaurant, rating in sorted(restaurant_ratings.iteritems()):
         print "{} is rated at {}.".format(restaurant, rating)
 
-    print restaurant
-    print line
 
 print_ratings(file_name)
